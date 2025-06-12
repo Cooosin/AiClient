@@ -23,6 +23,7 @@ mcp:
     url: "https://mcp.amap.com/sse?key=YOUR_GAODE_API_KEY"
 ```
 二、接口调用:
+`curl --location 'http://localhost:8182/travel/chat?content=xxx`
 prompt示例：
 ```tex
 你好，我需要你为我策划一份详尽的日本的旅游攻略。
@@ -47,5 +48,5 @@ prompt示例：
  必去景点/活动 ：环球影城，去买化妆品和性价比的物品
  兴趣偏好 ： 无
 ```
-`curl --location 'http://localhost:8182/travel/chat?content=xxx`
+
 
