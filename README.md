@@ -6,8 +6,8 @@
 
 
 1. **申请一个高德地图的ApiKey,用作远程SSE链接官方的MCP服务**：https://lbs.amap.com/
-3. **申请一个和风天气的ApiKey，用作自己构建可以进行SSE链接的MCP服务**：http://dev.qweather.com/
-4. **下载一个获取小红书内容的mcp服务，根据项目中的步骤安装相关依赖和cookie**：https://github.com/jobsonlook/xhs-mcp
+2. **下载一个获取小红书内容的mcp服务，根据项目中的步骤安装相关依赖和cookie**：https://github.com/jobsonlook/xhs-mcp
+3. **拉取WeatherMcpServer项目并启动：https://github.com/Cooosin/WeatherMcpServer/tree/master，或者注释掉天气服务的相关mcp注入代码
 
 - 修改配置文件：
 
