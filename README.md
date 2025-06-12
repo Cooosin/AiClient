@@ -1,6 +1,6 @@
 ## 一个支持小红书搜索，高德地图，和风天气的MCP服务
 
-###使用教程：
+### 使用教程：
 
 1. **申请一个高德地图的ApiKey**：https://lbs.amap.com/，用作远程SSE链接官方的MCP服务
 2. **申请一个和风天气的ApiKey**：http://dev.qweather.com/，用作自己构建可以进行SSE链接的MCP服务
