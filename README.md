@@ -24,6 +24,7 @@ mcp:
 ```
 二、接口调用:
 `curl --location 'http://localhost:8182/travel/chat?content=xxx`
+
 prompt示例：
 ```tex
 你好，我需要你为我策划一份详尽的日本的旅游攻略。
