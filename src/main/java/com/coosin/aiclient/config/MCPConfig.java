@@ -24,18 +24,26 @@ public class MCPConfig {
     @Value("${mcp.gaoDe.url:}")
     private String gaoDeUrl;
 
+    /**
+     * 自建天气SSE MCP服务
+     * @return
+     */
     @Bean
     public McpClient mcpClientWeather() {
         McpTransport transport = new HttpMcpTransport.Builder()
                 .sseUrl("http://localhost:8083/sse")
-                //.logRequests(true) // if you want to see the traffic in the log
-                //.logResponses(true)
+                .logRequests(true) // if you want to see the traffic in the log
+                .logResponses(true)
                 .build();
         return new DefaultMcpClient.Builder()
                 .transport(transport)
                 .build();
     }
 
+    /**
+     * 本地RedNoteBook服务
+     * @return
+     */
     @Bean
     public McpClient mcpClientRedNoteBookLocal() {
         return new DefaultMcpClient.Builder()
@@ -56,6 +64,10 @@ public class MCPConfig {
                 .build();
     }
 
+    /**
+     * 高德地图SSE MCP服务
+     * @return
+     */
     @Bean
     public McpClient mcpClientGaoDeMap() {
         McpTransport transport = new HttpMcpTransport.Builder()
@@ -67,18 +79,6 @@ public class MCPConfig {
                 .transport(transport)
                 .build();
     }
-
-    //@Bean
-    //public McpClient mcpClientRedNoteBookSse() {
-    //    McpTransport transport = new HttpMcpTransport.Builder()
-    //            .sseUrl("https://server.smithery.ai/@jobsonlook/xhs-mcp/mcp?profile=wittering-pheasant-r5Qlxf&api_key=b227b9f7-48fe-439f-8f79-d68772b9e646")
-    //            .logRequests(true) // if you want to see the traffic in the log
-    //            .logResponses(true)
-    //            .build();
-    //    return new DefaultMcpClient.Builder()
-    //            .transport(transport)
-    //            .build();
-    //}
 
     //@Bean
     //public McpClient mcpClientRedNoteBookLocal() {
@@ -97,7 +97,7 @@ public class MCPConfig {
     //@Bean
     //public McpClient mcpClient12306() {
     //    McpTransport transport = new HttpMcpTransport.Builder()
-    //            .sseUrl("https://mcp.api-inference.modelscope.cn/sse/33d5b1972d1842")
+    //            .sseUrl("xxx")
     //            .logRequests(true) // if you want to see the traffic in the log
     //            .logResponses(true)
     //            .build();
@@ -107,7 +107,11 @@ public class MCPConfig {
     //}
 
 
-
+    /**
+     * 把上述所有的MCP客户端注入到McpToolProvider中
+     * @param clients
+     * @return
+     */
     @Bean
     public McpToolProvider mcpToolProvider(List<McpClient> clients) {
         return McpToolProvider.builder()

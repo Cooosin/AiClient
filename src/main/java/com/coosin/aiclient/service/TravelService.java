@@ -41,7 +41,7 @@ public class TravelService {
         String htmlCode = normalAiAssistant.chatByTravelHtmlCreator(2, response);
         log.info("生成的HTML代码：{}", htmlCode);
         //清理返回的非法格式
-        clearHtmlCode(htmlCode);
+        htmlCode=clearHtmlCode(htmlCode);
         String fileName = OUTPUT_HTML_FILE;
         try {
             if (!Files.exists(Paths.get(fileName))) {
@@ -63,7 +63,7 @@ public class TravelService {
 
     }
 
-    private void clearHtmlCode(String htmlCode) {
+    private String clearHtmlCode(String htmlCode) {
         //检查是否开头为```html
         if (htmlCode.startsWith("```html")) {
             //将htmlCode中的开头的```html替换为空，用替换前几位字符串的方式去替换
@@ -74,7 +74,9 @@ public class TravelService {
             //将htmlCode中的结尾的```替换为空，用替换最后几位字符串的方式去替换
             htmlCode = htmlCode.substring(0, htmlCode.length() - 3);
         }
+        return htmlCode;
     }
+
 }
 
 

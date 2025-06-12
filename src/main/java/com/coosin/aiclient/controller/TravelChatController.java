@@ -32,7 +32,7 @@ public class TravelChatController {
     @RequestMapping("/test")
     public void test(@RequestParam String content) {
         String chat = toolAiAssistant.chat(content);
-        log.info("test chat response: {}", chat);
+        System.out.println("test chat response: " + chat);
     }
 
 
