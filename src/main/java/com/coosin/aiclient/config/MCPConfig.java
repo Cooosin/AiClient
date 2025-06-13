@@ -55,7 +55,7 @@ public class MCPConfig {
                                 "run",
                                 "@jobsonlook/xhs-mcp",
                                 "--key",
-                                "b227b9f7-48fe-439f-8f79-d68772b9e646",
+                                "xxxx",
                                 "--profile",
                                 "wittering-pheasant-r5Qlxf"
                         ))
