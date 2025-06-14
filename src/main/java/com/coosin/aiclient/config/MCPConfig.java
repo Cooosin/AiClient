@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -32,6 +33,7 @@ public class MCPConfig {
     public McpClient mcpClientWeather() {
         McpTransport transport = new HttpMcpTransport.Builder()
                 .sseUrl("http://localhost:8083/sse")
+                .timeout(Duration.ofMinutes(5))
                 .logRequests(true) // if you want to see the traffic in the log
                 .logResponses(true)
                 .build();
@@ -55,7 +57,7 @@ public class MCPConfig {
                                 "run",
                                 "@jobsonlook/xhs-mcp",
                                 "--key",
-                                "b227b9f7-48fe-439f-8f79-d68772b9e646",
+                                "xxx",
                                 "--profile",
                                 "wittering-pheasant-r5Qlxf"
                         ))
@@ -72,6 +74,7 @@ public class MCPConfig {
     public McpClient mcpClientGaoDeMap() {
         McpTransport transport = new HttpMcpTransport.Builder()
                 .sseUrl(gaoDeUrl)
+                .timeout(Duration.ofMinutes(5))
                 //.logRequests(true)
                 //.logResponses(true)
                 .build();

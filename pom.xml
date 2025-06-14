@@ -65,10 +65,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-mcp -->
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-mcp</artifactId>
-            <version>1.0.0-beta3</version>
+            <version>1.0.1-beta6</version>
         </dependency>
         <!-- SSE客户端支持 -->
         <dependency>
