@@ -15,7 +15,7 @@
 # 这里填写大模型的ApiKey和模型
 llm:
   apiKey: "YOUR_GEMINI_API_KEY"
-  modelName: "gemini-1.5-flash-latest"
+  modelName: "gemini-2.5-flash"
 
 # 这里填写高德地图的MCP-URL
 mcp:
