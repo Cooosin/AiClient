@@ -1,5 +1,8 @@
 ## 一个智能旅行规划助手：能够整合多种信息源：包括**小红书的热门攻略**、**实时天气预报**以及**高德地图的路线规划**去生成一份详尽的旅行计划并以美化后的HTML页面呈现出来。
 
+效果图：
+[![image](https://github.com/user-attachments/assets/8829dd3a-dcae-40a6-9f56-2c9b14777de8)](https://linux.do/uploads/default/original/4X/8/8/1/881a0bb14909e67f530185383e8f7655dd4d22b5.jpeg)
+
 
 
 ### 使用教程：
